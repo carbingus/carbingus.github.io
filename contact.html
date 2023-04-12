@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="formatting.css" rel="stylesheet" type="text/css">
+    <title>Contacto</title>
+</head>
+<body>
+        <div class="topnav">
+            <a href="/index.html">Inicio</a>
+            <a href="/articulo.html">Articulo</a>
+            <a class="active" style="float:right" href="/contact.html">Contacto</a>
+        </div>
+    <h1>Formulario de contacto:</h1>
+
+    <div style="text-align: center;"><form id="contacting" onsubmit="return false">
+        <p>
+            <label for="nombre">Ingrese su nombre:</label>
+        </p>
+
+        <input type="text" id="nombre" name="nombre"/>
+
+        <p>
+            <label for="email">Ingrese su correo electronico:</label>
+        </p>
+
+        <input type="text" placeholder="correo@gmail.com" id="email" name="email"/>
+
+        <p>
+            <label for="mensaje">Escriba su mensaje:</label>
+        </p>
+
+        <textarea id="mensaje" placeholder="Su mensaje aquí..."></textarea>
+    </form></div>
+
+</body>
+</html>

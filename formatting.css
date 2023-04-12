@@ -4,6 +4,7 @@ body {
   
   h1 {
     color: white;
+    padding-top: 65px;
     text-align: center;
   }
   
@@ -41,4 +42,28 @@ body {
   }
   .topnav :last-child{
     border-right: none;
+  }
+  .input[type=text]:focus{
+    background-color: gray;
+  }
+
+  textarea{
+    width: 100%;
+    height: 150px;;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize:none;
+  }
+  div.form
+  {
+      display: block;
+      text-align: center;
+  }
+  form
+  {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
   }
