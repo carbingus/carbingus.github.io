@@ -10,5 +10,33 @@ body {
   p {
     color: white;
     font-family: verdana;
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(139, 0, 0);
+  }
+
+  .topnav a{
+    float:left;
+    color:rgb(243, 243, 243);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-right: 2px solid black;
+  }
+
+  .topnav a:hover{
+    background-color:crimson;
+    color:black;
+  }
+
+  .topnav a.active{
+    background-color:gray;
+    color:white;
+  }
+  .topnav :last-child{
+    border-right: none;
   }
