@@ -14,8 +14,10 @@ body {
   }
 
   .topnav {
+    position:fixed;
     overflow: hidden;
     background-color: rgb(139, 0, 0);
+    width: 100%;
   }
 
   .topnav a{
