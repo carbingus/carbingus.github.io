@@ -42,6 +42,7 @@ body {
   }
   .topnav :last-child{
     border-right: none;
+    border-left: 2px solid black;
   }
   .input[type=text]:focus{
     background-color: gray;
