@@ -13,26 +13,35 @@
             <a href="/articulo.html">Articulo</a>
             <a class="active" style="float:right" href="/contact.html">Contacto</a>
         </div>
-    <h1>Formulario de contacto:</h1>
+    
 
-    <div style="text-align: center;"><form id="contacting" onsubmit="return false">
-        <p>
-            <label for="nombre">Ingrese su nombre:</label>
-        </p>
-
-        <input type="text" id="nombre" name="nombre"/>
+    <div style="text-align: center;" ><form id="contacting" onsubmit="return false">
+        <fieldset>
+        <legend><span>Formulario de contacto</span></legend>
 
         <p>
-            <label for="email">Ingrese su correo electronico:</label>
+            <label for="nombre">Ingrese su nombre:</label><span class="obligatorio">*</span>
         </p>
 
-        <input type="text" placeholder="correo@gmail.com" id="email" name="email"/>
+        <input type="text" id="nombre" name="nombre" required/>
 
         <p>
-            <label for="mensaje">Escriba su mensaje:</label>
+            <label for="email">Ingrese su correo electronico:</label><span class="obligatorio">*</span>
         </p>
 
-        <textarea id="mensaje" placeholder="Su mensaje aquí..."></textarea>
+        <input type="text" placeholder="correo@gmail.com" id="email" name="email" required/>
+
+        <p>
+            <label for="mensaje">Escriba su mensaje:</label><span class="obligatorio">*</span>
+        </p>
+
+        <textarea id="mensaje" placeholder="Su mensaje aquí..." required></textarea>
+        <p>
+            <input type="submit" value="Enviar mensaje"/>
+        </p>
+
+        <p>Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
+    </fieldset>
     </form></div>
 
 </body>
