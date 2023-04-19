@@ -140,3 +140,39 @@ body {
   border-radius: 2px;
   border-color:black;
 }
+
+
+section{
+  display:-webkit-flex;
+  display: flex;
+}
+
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: gray;
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+footer {
+  background-color: darkred;
+  padding: 5px;
+  text-align: right;
+  color: white;
+}
+
+h2{
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: black;
+  color:white;
+}
