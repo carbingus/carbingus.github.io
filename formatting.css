@@ -103,6 +103,18 @@ body {
     border-radius: 5px;
   }
 
+  input:invalid {
+    border-color: red;
+  }
+
+  input:invalid:before {
+    content: "Dato invalido, intente nuevamente";
+    color: red;
+    font-size: 0.8em;
+    margin-right: 5px;
+  }
+  
+
   label{
     text-decoration: underline;
     text-decoration-color: black;
