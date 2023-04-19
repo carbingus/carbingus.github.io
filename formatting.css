@@ -29,6 +29,8 @@ body {
     text-decoration: none;
     font-size: 17px;
     border-right: 2px solid black;
+
+
   }
 
   .topnav a:hover{
@@ -39,7 +41,10 @@ body {
   .topnav a.active{
     background-color:gray;
     color:white;
+    border-top:1px dotted black;
+    border-bottom: 1px dotted black;
   }
+
   .topnav :last-child{
     border-right: none;
     border-left: 2px solid black;
@@ -153,6 +158,7 @@ article {
   flex: 3;
   background-color: gray;
   padding: 5px;
+
 }
 
 @media (max-width: 600px) {
