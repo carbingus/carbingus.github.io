@@ -7,16 +7,32 @@
         <TITLE> El super articulo universal </TITLE>
         <link href="formatting.css" rel="stylesheet" type="text/css">
         <style>
-             article {
-        border-left: 2px solid black;
-        padding-left: 20px;
-        flex: 1;
-    }
+            article {
+                border-left: 2px solid black;
+                padding-left: 20px;
+                flex: 1;
+             }
+             div.menulado{                
+                background: #000000;
+                padding: 20px;
+                border: 1px solid white;
+                text-align:left;
+                padding-left: 10px;
+           }
+           #testCambiarTexto{
+            display: none;
+           }
+           #testCambiarTexto1{
+            display: none;
+           }
+           #testCambiarTexto2{
+            display: none;
+           }          
         </style>
     </HEAD>
 
 <body>
-        
+        <!-- barra navegacion top -->
         <div class="topnav">
             <a href="/index.html">Inicio</a>
             <a class="active" href="/articulo.html">Articulo</a>
@@ -28,48 +44,44 @@
         </div>
         
         <section>
-            
-            <nav style="text-align: left; padding-right: 10px; background-color: gray;">
-                <ul>
-
-                  <li><a href="#">London</a></li>
-                  <li><a href="#">Paris</a></li>
-                  <li><a href="#">Tokyo</a></li>
-
-                </ul>
-            </nav>
-        
+            <div class="menulado"> <!-- testeando inclusion de llamadas a javascript en un menu al lado del cuerpo del articulo-->
+                <nav>
+                    <ul style="list-style-type: square;">
+                        <li><button onclick="mostrarContenido('testCambiarTexto')">London</button></li>
+                        <li><button onclick="mostrarContenido('testCambiarTexto1')">Paris</button></li>
+                        <li><button onclick="mostrarContenido('testCambiarTexto2')">Tokyo</button></li>
+                    </ul>
+                </nav>
+            </div>
             <article>
                 <h2>Capatapa</h2>
-                <p>TEstando</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
-                <p>a</p>
+                <!-- La llamada a javascript en el menu (deberia) hacer display respectivo de cada div, y esconder los otros -->
+                <div id="testCambiarTexto" style="display: none";>
+                    <p>salvaje</p> 
+                </div>
+                <div id="testCambiarTexto1" style="display: none";>
+                    <p>salvaje2</p> 
+                </div>
+                <div id="testCambiarTexto2" style="display: none";>
+                    <p>salvaje3</p> 
+                </div>
+                
             </article>
          </section>
     <footer><p>Todos los derechos (e izquierdos) reservados.</p></footer>
-
+    
+    <!-- testeando scrips de javascript -->
+    <script>
+      function mostrarContenido(id) {
+      const contents = document.querySelectorAll('div[id^="testCambiarTexto"]');
+      for (let i = 0; i < contents.length; i++) {
+        if (contents[i].id === id) {
+          contents[i].style.display = "block";
+        } else {
+          contents[i].style.display = "none";
+        }
+      }
+    }
+    </script>
 </body>
+</html>
