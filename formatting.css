@@ -1,5 +1,7 @@
+
 body {
     background-color: rgb(0, 0, 0);
+    margin:0;
   }
   
   h1 {
@@ -14,11 +16,20 @@ body {
     font-size: 16px;
   }
 
+  #hashLink {
+    display: none;
+  }
+
+  #hashLink:target {
+    display: block;
+  }
+
   .topnav {
     position:fixed;
     overflow: hidden;
     background-color: rgb(139, 0, 0);
     width: 100%;
+    top:0;
   }
 
   .topnav a{
@@ -34,15 +45,13 @@ body {
   }
 
   .topnav a:hover{
-    background-color:crimson;
+    background-color:rgb(102, 28, 43);
     color:black;
   }
 
   .topnav a.active{
     background-color:gray;
     color:white;
-    border-top:1px dotted black;
-    border-bottom: 1px dotted black;
   }
 
   .topnav :last-child{
@@ -153,9 +162,7 @@ section{
 }
 
 article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
+
   background-color: gray;
   padding: 5px;
 
@@ -181,4 +188,30 @@ h2{
   text-underline-offset: 2px;
   text-decoration-color: black;
   color:white;
+}
+
+ul {
+  list-style: none; /* remover simbolitos default */
+}
+
+ul li::before {
+  content: "\25FB";  /* simbolito */
+  color: rgb(255, 255, 255); /* Change the color */
+  font-weight: bold; /* para texto en negrita */
+  display: inline-block; /* para agregar espacio entre simbolito y texto */
+  width: 1em; /* test de espaciado */
+  margin-left: -1em; /* mas test de espaciado */
+}
+
+
+button{
+  background:none;
+  border-color: none;
+  border: none;
+  font-weight:bold;
+  font-size:15px;
+  color:blue;
+  cursor:pointer;
+  text-decoration:underline solid blue;
+  text-underline-offset: 2px;
 }
