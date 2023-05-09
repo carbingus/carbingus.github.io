@@ -15,7 +15,7 @@
         </div>
     
 
-    <div style="text-align: center;" ><form id="contacting" onsubmit="return false">
+    <div style="text-align: center;" ><form id="contacting" onsubmit="return validarDatos()" method="dialog">
         <fieldset>
         <legend><span>Formulario de contacto</span></legend>
 
@@ -23,19 +23,19 @@
             <label for="nombre">Ingrese su nombre:</label><span class="obligatorio">*</span>
         </p>
 
-        <input type="text" id="nombre" name="nombre" required/>
+        <input type="text" id="nombre" name="nombre"/>
 
         <p>
             <label for="email">Ingrese su correo electronico:</label><span class="obligatorio">*</span>
         </p>
 
-        <input type="text" placeholder="correo@gmail.com" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+        <input type="text" placeholder="correo@gmail.com" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
 
         <p>
             <label for="mensaje">Escriba su mensaje:</label><span class="obligatorio">*</span>
         </p>
 
-        <textarea id="mensaje" placeholder="Su mensaje aquí..." required></textarea>
+        <textarea id="mensaje" placeholder="Su mensaje aquí..."></textarea>
         <p>
             <input type="submit" value="Enviar mensaje"/>
         </p>
@@ -45,5 +45,8 @@
     </form></div>
     
     <footer><p>Todos los derechos (e izquierdos) reservados.</p></footer>
+    <script src="escripos/escriposCopitos.js">
+        // <li><button onclick="mostrarContenido('testCambiarTexto')">London</button></li>
+    </script>
 </body>
 </html>
