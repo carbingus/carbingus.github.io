@@ -17,15 +17,15 @@ function validarDatos() {
     let emailValid = document.forms["contacting"]["email"].value;
     let mensajeValid = document.forms["contacting"]["mensaje"].value;
 
-    if (nombreValid == "" && nombreValid == null){
+    if (nombreValid == "" || nombreValid == null){
         alert("Usted debe ingresar su nombre.")
         return false;
     }
-    if (emailValid == "" && emailValid == null){
+    if (emailValid == "" || emailValid == null){
         alert("Usted debe ingresar su correo.")
         return false;
     }
-    if (mensajeValid == "" && mensajeValid == null){
+    if (mensajeValid == "" || mensajeValid == null){
         alert("Usted no ha escrito ningun mensaje para enviar.")
         return false;
     } else if (mensajeValidñ.length<6){
