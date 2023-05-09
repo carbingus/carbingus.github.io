@@ -28,7 +28,7 @@ function validarDatos() {
     if (mensajeValid == "" || mensajeValid == null){
         alert("Usted no ha escrito ningun mensaje para enviar.")
         return false;
-    } else if (mensajeValidñ.length<6){
+    } else if (mensajeValid.length<6){
         alert("Su mensaje no puede ser menor que 6 caracteres.")
     }
 
