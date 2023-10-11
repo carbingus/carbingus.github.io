@@ -40,13 +40,14 @@
         </div>
 
         <div>
-            <h1> Ipsum hasta que se me ocurra algo para el articulo</h1>
+            <h1 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Super articulo random</h1>
         </div>
         
         <section>
             <div class="menulado"> <!-- testeando inclusion de llamadas a javascript en un menu al lado del cuerpo del articulo-->
                 <nav>
                     <ul style="list-style-type: square;">
+                        <li><button onclick="mostrarContenido('testCambiarTexto3')">Inicio</button></li>
                         <li><button onclick="mostrarContenido('testCambiarTexto')">London</button></li>
                         <li><button onclick="mostrarContenido('testCambiarTexto1')">Paris</button></li>
                         <li><button onclick="mostrarContenido('testCambiarTexto2')">Tokyo</button></li>
@@ -54,16 +55,26 @@
                 </nav>
             </div>
             <article>
-                <h2>Capatapa</h2>
                 <!-- La llamada a javascript en el menu (deberia) hacer display respectivo de cada div, y esconder los otros -->
                 <div id="testCambiarTexto" style="display: none";>
-                    <p>salvaje</p> 
+                    <h2 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Parte 1</h2>
+                    <p style="text-align: center;">Bienvenido a mi pagina articulo donde usted podra seleccionar entre ciertas opciones<br>
+                    para poder previsualizar diferentes textos e imagenes.</p>
                 </div>
                 <div id="testCambiarTexto1" style="display: none";>
-                    <p>salvaje2</p> 
+                    <h2 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Parte 2</h2>
+                    <p style="text-align: center;">Bienvenido a mi pagina articulo donde usted podra seleccionar entre ciertas opciones<br>
+                    para poder previsualizar diferentes textos e imagenes.</p>
                 </div>
                 <div id="testCambiarTexto2" style="display: none";>
-                    <p>salvaje3</p> 
+                    <h2 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Parte 3</h2>
+                    <p style="text-align: center;">Bienvenido a mi pagina articulo donde usted podra seleccionar entre ciertas opciones<br>
+                    para poder previsualizar diferentes textos e imagenes.</p>
+                </div>
+                <div id="testCambiarTexto3" style="display: block";>
+                    <h2 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Inicio</h2>
+                    <p style="text-align: center;">Bienvenido a mi pagina articulo donde usted podra seleccionar entre ciertas opciones<br>
+                    para poder previsualizar diferentes textos e imagenes.</p>
                 </div>
                 
             </article>

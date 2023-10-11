@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <TITLE> El super articulo universal </TITLE>
+        <link href="formatting.css" rel="stylesheet" type="text/css">
+        <style>
+            article {
+                border-left: 2px solid black;
+                padding-left: 20px;
+                flex: 1;
+             }
+             div.menulado{                
+                background: #000000;
+                padding: 20px;
+                border: 1px solid white;
+                text-align:left;
+                padding-left: 10px;
+           }
+           #testCambiarTexto{
+            display: none;
+           }
+           #testCambiarTexto1{
+            display: none;
+           }
+           #testCambiarTexto2{
+            display: none;
+           }          
+        </style>
+    </HEAD>
+
+<body>
+        <!-- barra navegacion top -->
+        <div class="topnav">
+            <a href="/index.html">Inicio</a>
+            <a class="active" href="/articulo.html">Articulo</a>
+            <a style="float:right" href="/contact.html">Contacto</a>
+        </div>
+
+        <div>
+            <h1> Ipsum hasta que se me ocurra algo para el articulo</h1>
+        </div>
+        
+        <section>
+            <div class="menulado">
+                <nav>
+                    <ul style="list-style-type: square;">
+                        <li><button onclick="cambiarContenido('cambiarContenido')">London</button></li>
+                        <li><button onclick="cambiarContenido('cambiarContenido1')">Paris</button></li>
+                        <li><button onclick="cambiarContenido('cambiarContenido2')">Tokyo</button></li>
+                        <li><button onclick="cambiarContenido('cambiarContenido3')">Volver a texto original</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <article>
+                <h2>Capatapa</h2>
+                <!-- La llamada a javascript en el menu (deberia) hacer display respectivo de cada div, y esconder los otros -->
+                <div id="contenido"></div>
+            </article>
+        </section>
+        
+    <footer><p>Todos los derechos (e izquierdos) reservados.</p></footer>
+    
+    <script src = "escripos/escriposCopitos.js"></script>
+</body>
+</html>
