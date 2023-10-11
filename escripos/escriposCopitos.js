@@ -11,16 +11,14 @@ function mostrarContenido(id) {
 }
 
 function cambiarContenido(botonId) {
-  // Get the content element.
+
   const elementoContenido = document.querySelector('#contenido');
 
-  // Set the content element's innerHTML property to the content for the button that was clicked.
+
   elementoContenido.textContent = recibirContenidoPorBoton(botonId);
 }
 
 function recibirContenidoPorBoton(botonId) {
-  // Get the content for the button that was clicked.
-  // This content can be stored in a JavaScript object, a database, or anywhere else that is convenient for you.
 
   const contenido = {
     'cambiarContenido': 'Contenido pal boton "london".',
