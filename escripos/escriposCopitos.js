@@ -29,16 +29,58 @@ function recibirContenidoPorBoton(botonId) {
   return contenido[botonId];
 }
 
-// TODO: script para carrousel
+const arrayLoco = [
+  'img/3b1.jpg',
+  'img/media wuna.png',
+  'img/mistakes.png',
+];
 
-function carrusito() {
-  let arrayLoco = [];
-  arrayLoco.push(['img/3b1.jpg', 'Gato blin', '720px', '720px']);
-  arrayLoco.push(['img/media wuna.png', 'Quaso', '720px', '720px']);
-  arrayLoco.push(['img/mistakes.png', 'Errores', '720px', '720px']);
+let indiceActual = 0;
+let intervalo;
 
+const intervaloCambio = 3000;
+const imagenActual = document.getElementById('carru');
+const botonAtras = document.getElementById('boton-atras');
+const botonAdelante = document.getElementById('boton-adelante');
 
+function carrusito(indice) {
+  if (indice < 0) {
+    indiceActual = arrayLoco.length - 1;
+  } else if (indice >= arrayLoco.length) {
+    indiceActual = 0;
+  } else {
+    indiceActual = indice;
+  }
+  imagenActual.src = arrayLoco[indiceActual];
+  reiniciarIntervalo();
 }
+
+function mostrarSiguiente() {
+  indiceActual++;
+  carrusito(indiceActual);
+}
+
+function mostrarAnterior() {
+  indiceActual--;
+  carrusito(indiceActual);
+}
+
+function reiniciarIntervalo() {
+  clearInterval(intervalo);
+  intervalo = setInterval(mostrarSiguiente, intervaloCambio);
+}
+
+botonAtras.addEventListener('click', () => {
+  mostrarAnterior();
+  reiniciarIntervalo();
+});
+
+botonAdelante.addEventListener('click', () => {
+  mostrarSiguiente();
+  reiniciarIntervalo();
+});
+
+carrusito(indiceActual);
 
 let primero = document.querySelector("form input");
 primero.focus();
