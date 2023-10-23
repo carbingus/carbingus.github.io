@@ -14,17 +14,16 @@ function cambiarContenido(botonId) {
 
   const elementoContenido = document.querySelector('#contenido');
 
-
   elementoContenido.textContent = recibirContenidoPorBoton(botonId);
 }
 
 function recibirContenidoPorBoton(botonId) {
 
   const contenido = {
-    'cambiarContenido': 'Contenido pal boton "london".',
-    'cambiarContenido1': 'Contenido pal boton Paris .',
-    'cambiarContenido2': 'Contenido pal botonTokyo .',
-    'cambiarContenido3': 'Contenido original aca .',
+    'cambiarContenido' : 'Este es el contenido para el primer boton. Salút.',
+    'cambiarContenido1': 'Este es el contenido para el segundo boton. Dankeschön.',
+    'cambiarContenido2': 'Este es el contenido para el tercer boton. Grazie',
+    'cambiarContenido3': 'Bienvenido a un mini-test de contenido "dinamico" guardado en js que cambia el html de la pagina segun el boton seleccionado, en forma simplistsa retornando un nodo.'
   };
 
   return contenido[botonId];
@@ -45,53 +44,58 @@ let primero = document.querySelector("form input");
 primero.focus();
 let reg_correo = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
 
+
 function validarDatos() {
-    let nombreValid = document.querySelector("nombre");
-    let emailValid = document.querySelector("email");
-    let mensajeValid = document.querySelector("mensaje");
-    
-  
-    // $( "<p id='error_div'>Test</p>" ).appendTo( ".inner" ); / append
-    // $( "#error_div" ).remove(); / remover
-    if (nombreValid == "" || nombreValid == null) {
-      //mostrar error en html
-    }
-  
-    if (emailValid != "" && !reg_correo.test(emailValid.value)) {
-    
-      //mostrar error en html
+  var nombre = document.getElementById("nombre").value;
+  var email = document.getElementById("email").value;
+  var mensaje = document.getElementById("comentarios").value; // Cambiado de "mensaje" a "comentarios"
+  var mensajeError = document.getElementById("mensajeError");
+  mensajeError.innerHTML = ""; // Limpiar mensajes de error anteriores
 
-    }
-  
-    if (mensajeValid == "" || mensajeValid == null) {
-      
-      //mostrar error en html
-      
-    } else if (mensajeValid.length < 10) {
-      
-      //mostrar error en html
-      
-    }
+  // Regex para validar el correo electrónico (reemplaza "tu_regex_de_correo" con tu regex actual)
 
-    if (terror){
-      errores.style.display = "initial";
-      return false;
-    } else{
-      let p = document.createElement("p");
-      if (emailValid.value != ""){
-        p.innerHTML =
-        nombreValid.value + "(" + emailValid.value + ")"+ " ha escrito \n" +
-        mensajeValid.value + ".";
-      } else{
-        p.innerHTML =
-        nombreValid.value + " ha escrito; \n" +
-        mensajeValid.value + ".";
-      }
-      mensajes.appendChild(p);
-      document.forms["contacting"].reset();
-      let primero = document.querySelector("form input");
-      primero.focus();
-    }
-    return false;
+  if (nombre === "") {
+      mensajeError.innerHTML += "Por favor, ingrese su nombre.<br>";
   }
 
+  if (email === "" || !reg_correo.test(email)) {
+      mensajeError.innerHTML += "Por favor, ingrese un correo electrónico válido.<br>";
+  }
+
+   // Validar mensaje
+   if (mensaje === "" || mensaje === null) {
+    mensajeError.innerHTML += "Por favor, ingrese su mensaje.<br>";
+} else if (mensaje.trim().length < 10) {
+    mensajeError.innerHTML += "El mensaje debe tener al menos 10 caracteres.<br>";
+}
+
+if (mensajeError.innerHTML === "") {
+    // Si no hay errores, el formulario se enviará
+    return true;
+} else {
+    // Si hay errores, el formulario no se enviará
+    return false;
+}
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  var textarea = document.getElementById("comentarios");
+  var contadorCaracteres = document.getElementById("contadorCaracteres");
+
+
+  var limiteCaracteres = parseInt(textarea.getAttribute("maxlength"));
+  
+
+  contadorCaracteres.textContent = "Caracteres restantes: " + limiteCaracteres;
+
+
+  textarea.addEventListener("input", function() {
+
+      var longitudTexto = textarea.value.length;
+      
+
+      var caracteresRestantes = limiteCaracteres - longitudTexto;
+      contadorCaracteres.textContent = "Caracteres restantes: " + caracteresRestantes;
+  });
+});

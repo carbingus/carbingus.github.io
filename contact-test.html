@@ -14,10 +14,10 @@
             <a class="active" style="float:right" href="/contact.html">Contacto</a>
         </div>
     
-    <div class=conten style="text-align: center;">
+    <div style="text-align: center; display:flex; justify-content: center; align-items: center; height:100vh;">;
         <form id="contacting" onsubmit="return validarDatos()">
             <fieldset>
-            <legend><span>Caja de comentarios</span></legend>
+            <legend><span>Formulario de contacto</span></legend>
 
             <p>
                 <label for="nombre">Ingrese su nombre:</label><span class="obligatorio">*</span>
@@ -30,17 +30,19 @@
             </p>
 
             <input type="text" placeholder="correo@gmail.com" id="email" name="email"/>
+
             <p>
             <label for="mensaje">Escriba su mensaje:</label><span class="obligatorio">*</span>
             </p>
-                <div>
-                    <textarea name="comentarios" id="comentarios" style="font-family: sans-serif;font-size: 1.2em;"
-                    placeholder="Escriba su mensaje aqui.">
-                    </textarea>
-                </div>
-                <button type="submit">Enviar</button>
+            <div>
+                <textarea name="comentarios" id="comentarios" style="font-family: sans-serif;font-size: 1.2em;"
+                placeholder="Escriba su mensaje aqui." maxlength="255">
+                </textarea>
+                <div id="contadorCaracteres" style="text-align: right; padding: 5px; font-size: 0.8em;"></div>
+            </div>
+            <button type="submit">Enviar</button>
+            <div id="mensajeError"></div>
         </form>
-
 
         <p>Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
 
@@ -49,8 +51,6 @@
     </div>
     
     <footer><p>Todos los derechos (e izquierdos) reservados.</p></footer>
-    <script src="escripos/escriposCopitos.js">
-        // <li><button onclick="mostrarContenido('testCambiarTexto')">London</button></li>
-    </script>
+    <script src="escripos/escriposCopitos.js"></script>
 </body>
 </html>
