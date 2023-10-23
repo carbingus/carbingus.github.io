@@ -1,164 +1,167 @@
 body {
-    background-color: rgb(0, 0, 0);
-    margin:0;
-  }
-  
-  h1 {
-    color: white;
-    padding-top: 65px;
-    text-align: center;
-  }
-  
-  p {
-    color: white;
-    font-family: verdana;
-    font-size: 16px;
-  }
-
-  .menulin{
-    text-decoration: underline;
-    text-decoration-color: white;
-    font-size: 14px;
-    text-align:center;
-    margin-top: 2px;
-    margin-bottom:25px;
-  }
-  #hashLink {
-    display: none;
-  }
-
-  #hashLink:target {
-    display: block;
-  }
-
-  .topnav {
-    position:fixed;
-    overflow: hidden;
-    background-color: rgb(139, 0, 0);
-    width: 100%;
-    top:0;
-  }
-
-  .topnav a{
-    float:left;
-    color:rgb(243, 243, 243);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-right: 2px solid black;
-
-
-  }
-
-  .topnav a:hover{
-    background-color:rgb(102, 28, 43);
-    color:black;
-  }
-
-  .topnav a.active{
-    background-color:green;
-    color:white;
-  }
-
-  .topnav :last-child{
-    border-right: none;
-    border-left: 2px solid black;
-  }
-  .input[type=text]:focus{
-    background-color: gray;
-  }
-
-  textarea{
-    width: auto;
-    min-width: 100%;
-    max-width: 500px;
-    height: auto;
-    min-height:150px;
-    max-height:300px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
-
-  div.form
-  {
-      display: block;
-      text-align: center;
-  }
-
-  form{
-    display:block;
-    flex-direction: column;
-    gap: 10px;
-    padding: 30px;
-    margin: 10px;
-   }
-   
-   textarea {
-    border: 1px solid black;
-    border-radius: 0px 15px 0px 15px;
-   }
-
-
-  fieldset{
-    border:thin solid red;
-    background-color: gray;
-    margin: auto;
-    
-  }
-
-  fieldset legend{
-    margin: 0;
-    padding: 5px 10px;
-  }
-
-  legend{
-    background-color: gray;
-    padding: 5px 10px;
-    font-weight: bold;
-    
-  }
-  input {
-    margin: 5px;
-  }
-  
-
-  input[type=text]{
-    border: 2px solid black;
-    border-radius: 5px;
-  }
-
-  input:invalid {
-    border-color: red;
-  }
-
-  input:invalid:before {
-    content: "Dato invalido, intente nuevamente";
-    color: red;
-    font-size: 0.8em;
-    margin-right: 5px;
-  }
-  
-
-  label{
-    text-decoration: underline;
-    text-decoration-color: black;
-    text-underline-offset: 5px;
-  }
-
-
-.obligatorio{
-    content: "*";
-    color: blue;
-    margin-right: 5px;
+  background-color: rgb(0, 0, 0);
+  margin: 0;
 }
 
-.contenedor{
+h1 {
+  color: white;
+  padding-top: 65px;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-family: verdana;
+  font-size: 16px;
+}
+
+.menulin {
+  text-decoration: underline;
+  text-decoration-color: white;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 25px;
+}
+
+#hashLink {
+  display: none;
+}
+
+#hashLink:target {
+  display: block;
+}
+
+.topnav {
+  position: fixed;
+  overflow: hidden;
+  background-color: rgb(139, 0, 0);
+  width: 100%;
+  top: 0;
+}
+
+.topnav a {
+  float: left;
+  color: rgb(243, 243, 243);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-right: 2px solid black;
+
+
+}
+
+.topnav a:hover {
+  background-color: rgb(102, 28, 43);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: green;
+  color: white;
+}
+
+.topnav :last-child {
+  border-right: none;
+  border-left: 2px solid black;
+}
+
+.input[type=text]:focus {
+  background-color: gray;
+}
+
+textarea {
+  width: auto;
+  min-width: 100%;
+  max-width: 500px;
+  height: auto;
+  min-height: 150px;
+  max-height: 300px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+div.form {
+  display: block;
+  text-align: center;
+}
+
+form {
+  display: block;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  margin: 10px;
+}
+
+textarea {
+  border: 1px solid black;
+  border-radius: 0px 15px 0px 15px;
+}
+
+
+fieldset {
+  border: thin solid red;
+  background-color: gray;
+  margin: auto;
+
+}
+
+fieldset legend {
+  margin: 0;
+  padding: 5px 10px;
+}
+
+legend {
+  background-color: gray;
+  padding: 5px 10px;
+  font-weight: bold;
+
+}
+
+input {
+  margin: 5px;
+}
+
+
+input[type=text] {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:invalid:before {
+  content: "Dato invalido, intente nuevamente";
+  color: red;
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+
+
+label {
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-underline-offset: 5px;
+}
+
+
+.obligatorio {
+  content: "*";
+  color: blue;
+  margin-right: 5px;
+}
+
+.contenedor {
   display: flex;
   justify-content: center;
 }
-.centrar{
+
+.centrar {
   border: 5px solid;
   margin: auto;
   width: 50%;
@@ -166,22 +169,22 @@ body {
 
 }
 
-#contacting{
+#contacting {
   top: 80px;
   margin: 80px;
   padding: 10px;
   width: 25%;
 }
 
-#camposfill{
+#camposfill {
   border: 2px;
   border-radius: 2px;
-  border-color:black;
+  border-color: black;
 }
 
 
-section{
-  display:-webkit-flex;
+section {
+  display: -webkit-flex;
   display: flex;
 }
 
@@ -204,48 +207,66 @@ footer {
   padding: 5px;
   text-align: right;
   color: white;
+  margin-top: 10%;
 }
 
-h2{
+h2 {
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: black;
-  color:white;
+  color: white;
 }
 
 ul {
-  list-style: none; /* remover simbolitos default */
+  list-style: none;
+  /* remover simbolitos default */
 }
 
 ul li::before {
-  content: "\25FB";  /* simbolito */
-  color: rgb(255, 255, 255); /* Change the color */
-  font-weight: bold; /* para texto en negrita */
-  display: inline-block; /* para agregar espacio entre simbolito y texto */
-  width: 1em; /* test de espaciado */
-  margin-left: -1em; /* mas test de espaciado */
+  content: "\25FB";
+  /* simbolito */
+  color: rgb(255, 255, 255);
+  /* Change the color */
+  font-weight: bold;
+  /* para texto en negrita */
+  display: inline-block;
+  /* para agregar espacio entre simbolito y texto */
+  width: 1em;
+  /* test de espaciado */
+  margin-left: -1em;
+  /* mas test de espaciado */
 }
 
 
-button{
-  background:none;
+button {
+  background: none;
   border-color: none;
   border: none;
-  font-weight:bold;
-  font-size:15px;
-  color:orange;
-  cursor:pointer;
-  text-decoration:underline solid blue;
+  font-weight: bold;
+  font-size: 15px;
+  color: orange;
+  cursor: pointer;
+  text-decoration: underline solid blue;
   text-underline-offset: 2px;
 }
 
-button:active{
-  color:white
+button:active {
+  color: white
 }
 
-button:focus{
+button:focus {
   color: purple;
+}
+
+.mensajeExito {
+  color: orange;
+  font-weight: bold;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  margin: 5%;
+
 }
 
 #errores {
