@@ -14,43 +14,43 @@
             <a class="active" style="float:right" href="/contact.html">Contacto</a>
         </div>
     
+    <div style="text-align: center; display:flex; justify-content: center; align-items: center; height:100vh;">;
+        <form id="contacting" onsubmit="return validarDatos()">
+            <fieldset>
+            <legend><span>Formulario de contacto</span></legend>
 
-    <div style="text-align: center;">
-        <form id="contacting" onsubmit="return validarDatos()" method="dialog">
-                <fieldset>
-                <legend><span>Formulario de contacto</span></legend>
+            <p>
+                <label for="nombre">Ingrese su nombre:</label><span class="obligatorio">*</span>
+            </p>
 
-                <p>
-                    <label for="nombre">Ingrese su nombre:</label><span class="obligatorio">*</span>
-                </p>
+            <input type="text" id="nombre" name="nombre"/>
+            
+            <p>
+                <label for="email">Ingrese su correo electronico:</label><span class="obligatorio">*</span>
+            </p>
 
-                <input type="text" id="nombre" name="nombre"/>
+            <input type="text" placeholder="correo@gmail.com" id="email" name="email"/>
 
-                <p>
-                    <label for="email">Ingrese su correo electronico:</label><span class="obligatorio">*</span>
-                </p>
-
-                <input type="text" placeholder="correo@gmail.com" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
-
-                <p>
-                    <label for="mensaje">Escriba su mensaje:</label><span class="obligatorio">*</span>
-                </p>
-
-                <textarea id="mensaje" placeholder="Su mensaje aquí..."></textarea>
-                <p>
-                    <input type="submit" value="Enviar mensaje"/>
-                </p>
-
-                <p font-size:smaller text-align:right>Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
-            </fieldset>
+            <p>
+            <label for="mensaje">Escriba su mensaje:</label><span class="obligatorio">*</span>
+            </p>
+            <div>
+                <textarea name="comentarios" id="comentarios" style="font-family: sans-serif;font-size: 1.2em;"
+                placeholder="Escriba su mensaje aqui." maxlength="255">
+                </textarea>
+                <div id="contadorCaracteres" style="text-align: right; padding: 5px; font-size: 0.8em;"></div>
+            </div>
+            <button type="submit">Enviar</button>
+            <div id="mensajeError"></div>
         </form>
+
+        <p>Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
+
+
+            </fieldset>
     </div>
     
-    <footer>
-        <p>Todos los derechos (e izquierdos) reservados.</p>
-    </footer>
-    <script src="escripos/escriposCopitos.js">
-        // <li><button onclick="mostrarContenido('testCambiarTexto')">London</button></li>
-    </script>
+    <footer><p>Todos los derechos (e izquierdos) reservados.</p></footer>
+    <script src="escripos/escriposCopitos.js"></script>
 </body>
 </html>

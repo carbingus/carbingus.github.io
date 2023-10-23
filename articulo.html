@@ -31,7 +31,7 @@
         </style>
     </HEAD>
 
-<body>
+<body onload="cambiarContenido('cambiarContenido3')">
         <!-- barra navegacion top -->
         <div class="topnav">
             <a href="/index.html">Inicio</a>
@@ -40,45 +40,29 @@
         </div>
 
         <div>
-            <h1 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Super articulo random</h1>
+            <h1> Ipsum hasta que se me ocurra algo para el articulo</h1>
         </div>
         
         <section>
-            <div class="menulado"> <!-- testeando inclusion de llamadas a javascript en un menu al lado del cuerpo del articulo-->
+            <div class="menulado">
                 <nav>
+                    <p class="menulin">Opciones</p>
                     <ul style="list-style-type: square;">
-                        <li><button onclick="mostrarContenido('testCambiarTexto3')">Inicio</button></li>
-                        <li><button onclick="mostrarContenido('testCambiarTexto')">London</button></li>
-                        <li><button onclick="mostrarContenido('testCambiarTexto1')">Paris</button></li>
-                        <li><button onclick="mostrarContenido('testCambiarTexto2')">Tokyo</button></li>
+                        
+                        <li><button onclick="cambiarContenido('cambiarContenido')">Contenido 1</button></li>
+                        <li><button onclick="cambiarContenido('cambiarContenido1')">Contenido 2</button></li>
+                        <li><button onclick="cambiarContenido('cambiarContenido2')">Contenido 3</button></li>
+                        <li><button onclick="cambiarContenido('cambiarContenido3')">Texto inicial</button></li>
                     </ul>
                 </nav>
             </div>
             <article>
+                <h2>Capatapa</h2>
                 <!-- La llamada a javascript en el menu (deberia) hacer display respectivo de cada div, y esconder los otros -->
-                <div id="testCambiarTexto" style="display: none";>
-                    <h2 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Parte 1</h2>
-                    <p style="text-align: center;">Bienvenido a mi pagina articulo donde usted podra seleccionar entre ciertas opciones<br>
-                    para poder previsualizar diferentes textos e imagenes.</p>
-                </div>
-                <div id="testCambiarTexto1" style="display: none";>
-                    <h2 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Parte 2</h2>
-                    <p style="text-align: center;">Bienvenido a mi pagina articulo donde usted podra seleccionar entre ciertas opciones<br>
-                    para poder previsualizar diferentes textos e imagenes.</p>
-                </div>
-                <div id="testCambiarTexto2" style="display: none";>
-                    <h2 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Parte 3</h2>
-                    <p style="text-align: center;">Bienvenido a mi pagina articulo donde usted podra seleccionar entre ciertas opciones<br>
-                    para poder previsualizar diferentes textos e imagenes.</p>
-                </div>
-                <div id="testCambiarTexto3" style="display: block";>
-                    <h2 style="text-decoration: underline; text-underline-offset: 2px; text-decoration-color: black ;">Inicio</h2>
-                    <p style="text-align: center;">Bienvenido a mi pagina articulo donde usted podra seleccionar entre ciertas opciones<br>
-                    para poder previsualizar diferentes textos e imagenes.</p>
-                </div>
-                
+                <div id="contenido"></div>
             </article>
-         </section>
+        </section>
+        
     <footer><p>Todos los derechos (e izquierdos) reservados.</p></footer>
     
     <script src = "escripos/escriposCopitos.js"></script>
