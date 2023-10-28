@@ -31,8 +31,10 @@ function recibirContenidoPorBoton(botonId) {
 
 const arrayLoco = [
   'img/3b1.jpg',
+  'img/gordonFreeman.png',
   'img/media wuna.png',
   'img/mistakes.png',
+  'img/Gman.png',
 ];
 
 let indiceActual = 0;
