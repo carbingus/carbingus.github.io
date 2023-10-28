@@ -9,6 +9,8 @@ function validarDatos() {
   var mensaje = document.getElementById("comentarios").value;
   var mensajeError = document.getElementById("mensajeError");
   var mensajeSuceso = document.getElementById("mensajeExito");
+  var clonarMensaje = document.getElementById("retornoMensaje");
+
   mensajeSuceso.innerHTML = "";
   mensajeError.innerHTML = ""; // Limpiar mensajes de error anteriores
 
@@ -32,9 +34,13 @@ function validarDatos() {
   if (mensajeError.innerHTML === "") {
     mensajeSuceso.innerHTML += "Mensaje enviado satisfactoriamente."
     mensajeSuceso.className = "mensajeExito";
+    //error = true;
+    if (clonarMensaje.innerHTML === "") {
+      clonarMensaje.className = "mensajon";
+      clonarMensaje.innerHTML = nombre + " ha escrito:<br>" + mensaje;
+    }
     return false;
   } else {
-
     return false;
   }
 }
