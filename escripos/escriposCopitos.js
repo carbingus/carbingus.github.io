@@ -13,17 +13,35 @@ function mostrarContenido(id) {
 function cambiarContenido(botonId) {
 
   const elementoContenido = document.querySelector('#contenido');
+  const contenido = recibirContenidoPorBoton(botonId);
+  elementoContenido.textContent = contenido.texto;
 
-  elementoContenido.textContent = recibirContenidoPorBoton(botonId);
+  
+  const imagen = document.createElement('img');
+  imagen.src = contenido.imagen;
+
+  elementoContenido.appendChild(imagen);
 }
 
 function recibirContenidoPorBoton(botonId) {
 
   const contenido = {
-    'cambiarContenido': 'Este es el contenido para el primer boton. Salút.',
-    'cambiarContenido1': 'Este es el contenido para el segundo boton. Dankeschön.',
-    'cambiarContenido2': 'Este es el contenido para el tercer boton. Grazie',
-    'cambiarContenido3': 'Bienvenido a un mini-test de contenido "dinamico" guardado en js que cambia el html de la pagina segun el boton seleccionado, en forma simplistsa retornando un nodo.'
+    'cambiarContenido': {
+      texto: 'Este es el contenido para el primer botón. Salút.',
+      imagen: 'img/angy.png'
+    },
+    'cambiarContenido1': {
+      texto: 'Este es el contenido para el segundo botón. Dankeschön.',
+      imagen: 'img/angier.png'
+    },
+    'cambiarContenido2': {
+      texto: 'Este es el contenido para el tercer botón. Grazie.',
+      imagen: 'img/perritoLoco.png'
+    },
+    'cambiarContenido3': {
+      texto: 'Bienvenido a un mini-test de contenido "dinámico" guardado en JS que cambia el HTML de la página según el botón seleccionado, en forma simplista retornando un nodo.',
+      imagen: 'img/carbingus.png'
+    }
   };
 
   return contenido[botonId];
